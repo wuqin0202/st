@@ -5,7 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+// 可用fc-list 查看已有字体，pixelsize 为矢量图字体大小，antialias 为抗锯齿, autohint 为对轮廓增强
+static char *font = "Monaco:size=15:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -193,9 +194,9 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
-	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
+	{ ControlMask,          XK_equal,       zoom,           {.f = +1} },	// 放大
+	{ ControlMask,          XK_minus,       zoom,           {.f = -1} },	// 缩小
+	{ ControlMask,          XK_Return,      zoomreset,      {.f =  0} },	// 大小重置
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
