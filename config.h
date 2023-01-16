@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 // 可用fc-list 查看已有字体，pixelsize 为矢量图字体大小，antialias 为抗锯齿, autohint 为对轮廓增强
-static char *font = "MonacoB Nerd Font Mono:pixelsize=22:antialias=true:autohint=true";
+static char *font = "JetBrainsMono Nerd Font:pixelsize=21:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -75,7 +75,7 @@ static unsigned int cursorthickness = 2;
 static int bellvolume = 0;
 
 /* default TERM value */
-char *termname = "st-256color";
+char *termname = "st";
 
 /*
  * spaces per tab
@@ -95,7 +95,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 0.7;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
